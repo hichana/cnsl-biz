@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "scrape": "node scripts/scrape-x-list.mjs"
+    "scrape": "node scripts/scrape-x-list.mjs",
+    "scrape:cron": "node scripts/run-scrape-cron.mjs"
   },
   "dependencies": {
     "@browserbasehq/sdk": "^2.0.0",
