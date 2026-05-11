@@ -1,0 +1,13 @@
+{
+  "name": "cnsl-biz",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/scrape-x-list.mjs"
+  },
+  "dependencies": {
+    "@browserbasehq/sdk": "^2.0.0",
+    "@browserbasehq/stagehand": "^3.0.0",
+    "dotenv": "^16.0.0"
+  }
+}
