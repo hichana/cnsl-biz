@@ -9,13 +9,18 @@
  *   AI_IS_AWESOME_LIST_ID   — full URL, e.g. https://x.com/i/lists/1601254642423250945
  *
  * Optional:
- *   MAX_TWEETS   — number of tweets to collect (default: 50)
+ *   MAX_TWEETS              — number of tweets to collect (default: 50)
+ *   SCROLL_MIN_VIEWPORTS    — min scroll distance per round (default: 1.1)
+ *   SCROLL_MAX_VIEWPORTS    — max scroll distance per round (default: 2.3)
+ *   SCROLL_WAIT_MIN_MS      — min wait between scrolls (default: 3500)
+ *   SCROLL_WAIT_MAX_MS      — max wait between scrolls (default: 8000)
  *
  * Output: JSON array of tweets to stdout, progress to stderr.
  * Usage:  node scripts/scrape-x-list.mjs
  */
 
 import 'dotenv/config';
+import { randomInt } from 'node:crypto';
 import { Stagehand } from '@browserbasehq/stagehand';
 import { chromium } from 'playwright-core';
 
@@ -25,9 +30,24 @@ const CONTEXT_ID = process.env.BROWSERBASE_CONTEXT_ID;
 const LIST_URL   = process.env.AI_IS_AWESOME_LIST_ID;
 const MAX_TWEETS = parseInt(process.env.MAX_TWEETS ?? '50', 10);
 
+const SCROLL_MIN_VIEWPORTS = parseFloat(process.env.SCROLL_MIN_VIEWPORTS ?? '1.1');
+const SCROLL_MAX_VIEWPORTS = parseFloat(process.env.SCROLL_MAX_VIEWPORTS ?? '2.3');
+const SCROLL_WAIT_MIN_MS   = parseInt(process.env.SCROLL_WAIT_MIN_MS ?? '3500', 10);
+const SCROLL_WAIT_MAX_MS   = parseInt(process.env.SCROLL_WAIT_MAX_MS ?? '8000', 10);
+
 if (!API_KEY || !PROJECT_ID || !CONTEXT_ID || !LIST_URL) {
   console.error('Missing required env vars: BROWSERBASE_API_KEY, BROWSERBASE_PROJECT_ID, BROWSERBASE_CONTEXT_ID, AI_IS_AWESOME_LIST_ID');
   process.exit(1);
+}
+
+function randomBetween(min, max) {
+  if (!Number.isFinite(min) || !Number.isFinite(max) || max <= min) return min;
+  return min + Math.random() * (max - min);
+}
+
+function randomIntBetween(min, max) {
+  if (!Number.isFinite(min) || !Number.isFinite(max) || max <= min) return min;
+  return randomInt(Math.floor(min), Math.floor(max) + 1);
 }
 
 function extractTweetsFromDOM(elements) {
@@ -90,8 +110,10 @@ async function main() {
       noNewRounds = added === 0 ? noNewRounds + 1 : 0;
 
       if (tweets.length < MAX_TWEETS) {
-        await page.evaluate(() => window.scrollBy(0, window.innerHeight * 3));
-        await page.waitForTimeout(2500);
+        const distance = randomBetween(SCROLL_MIN_VIEWPORTS, SCROLL_MAX_VIEWPORTS);
+        const waitMs = randomIntBetween(SCROLL_WAIT_MIN_MS, SCROLL_WAIT_MAX_MS);
+        await page.evaluate(viewports => window.scrollBy(0, window.innerHeight * viewports), distance);
+        await page.waitForTimeout(waitMs);
       }
     }
 
