@@ -12,12 +12,12 @@ export function Process() {
           kicker="How it works"
           title={
             <>
-              You hand us{" "}
+              Let us fix{" "}
               <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-                the mess.
+                the mess
               </em>
               <br />
-              We hand you back a codebase.
+              While you sleep.
             </>
           }
           right={
@@ -34,13 +34,13 @@ export function Process() {
             <figure className="proc-foreman">
               <div className="proc-foreman-tag">
                 <span className="ln-1">{"// INSPECTOR ON SHIFT"}</span>
-                <span className="ln-2">M. Rivera</span>
+                <span className="ln-2">@GoChanaGo</span>
                 <span className="ln-3">
                   Senior Software Engineer · ID DJS-0419
                 </span>
               </div>
               <Image
-                src="/assets/hero-crew-cut-35.png"
+                src="/assets/go-chana-go.jpg"
                 alt="DirtyJobs.studio foreman at the bench"
                 width={600}
                 height={750}

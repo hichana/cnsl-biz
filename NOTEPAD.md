@@ -13,12 +13,11 @@
 
 ## PROJECT: DIRTY JOBS:
 - need
-    - favicon
-    - rename to DJS (logo)
     - customize copy throughout
     - set up email
     - deploy to Vercel
         - set up custom domain
+    - favicon
     - Add Google Analytics
 
 

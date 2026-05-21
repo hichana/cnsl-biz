@@ -3,7 +3,9 @@ export function Nav() {
     <nav className="nav">
       <div className="wrap nav-inner">
         <a className="logo" href="#top" aria-label="DirtyJobs dot studio">
-          <span className="logo-mark"><span>DJ</span></span>
+          <span className="logo-mark">
+            <span>DJ</span>
+          </span>
           <span className="logo-text">
             <span>DirtyJobs</span>
             <span className="tld">.studio</span>

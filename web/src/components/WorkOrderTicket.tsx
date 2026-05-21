@@ -41,7 +41,7 @@ export function WorkOrderTicket() {
       </div>
       <div className="ticket-foot">
         <span>Inspected by</span>
-        <span className="sig">M. Rivera</span>
+        <span className="sig">@GoChanaGo</span>
       </div>
     </div>
   );

@@ -8,8 +8,20 @@ export function FAQ() {
         <SecHead
           no="06"
           kicker="FAQ"
-          title={<>Questions we get <em style={{ fontStyle: "italic", color: "var(--accent)" }}>weekly.</em></>}
-          right={<>The honest version. If yours isn&apos;t here, the contact form goes straight to a human who will read it within a day.</>}
+          title={
+            <>
+              Questions we get{" "}
+              <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
+                weekly.
+              </em>
+            </>
+          }
+          right={
+            <>
+              If your question isn&apos;t here, the contact form goes straight
+              to a human who will read it within a day.
+            </>
+          }
         />
         <div className="faq">
           {FAQS.map((it, i) => (
