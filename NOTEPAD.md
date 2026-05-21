@@ -13,12 +13,21 @@
 
 ## PROJECT: DIRTY JOBS:
 - need
-    - customize copy throughout
-    - set up email
+    -x customize copy throughout
+    -x set up email
+        - hello@mail.dirtyjobs.studio
+        - matt@mail.dirtyjobs.studio
     - deploy to Vercel
         - set up custom domain
     - favicon
     - Add Google Analytics
+    - set up
+        - Calendly
+            - free for now, they can schedule a meeting and I'll create a payment link
+        - Stripe products corresponding to DJ pricing
+        - Slack
+        - Hermes connected to Slack
+        - Hermes with its own email
 
 
 - http://dirtyjobs.studio
