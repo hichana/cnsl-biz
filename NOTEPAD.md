@@ -12,26 +12,35 @@
         - Make Japanese CV
 
 ## PROJECT: DIRTY JOBS:
-- http://dirtyjobs.ai 
+- need
+    - favicon
+    - rename to DJS (logo)
+    - customize copy throughout
+    - set up email
+    - deploy to Vercel
+        - set up custom domain
+    - Add Google Analytics
+
+
+- http://dirtyjobs.studio
     - do as much upfront work before buying the domain and populating SquareSpace with content, setting up Stripe, and so on
-    - emoji options
-        - hazmat guy: https://openmoji.org/library/emoji-E2D9
-        - shovel: https://openmoji.org/library/emoji-1FA8F
 - Business: Productized AI Slop cleanup targeting non-technical founders who built applications using AI
+- Internal tools
+    - Calendly
 - Services
     - refactoring
     - feature and functionality audits
     - user data stewardship audits
     - bug fixes
         - "My AI is stuck in a loop trying to add a payment gateway; audit this repository file and tell me why it's breaking."
-    - testing
+    - testing (unit, integration, e2e)
     - CTO oversight, architectural validation
-    - basically anything as long as it's scoped
     - security scans (we proxy to other API services like either through API or we just use our own sub)
         - https://www.sonarsource.com/products/sonarqube/
         - Snyk
         - https://semgrep.dev
     - cloud services/infrastructure setup and management (Vercel, Supabase, etc.)
+    - Observability (LangChain, Braintrust, etc.)
 - website
     - inspired by https://upcode.com/unlimited
     - use the example of the train going off the tracks meme -- "Is this how your app probably works?" -- "There's a difference between 'it works' and 'It WORKS!!!'"
@@ -315,3 +324,6 @@ Some clients will try to bypass the model. Use these structural policies to hand
 
 
 
+    - emoji options
+        - hazmat guy: https://openmoji.org/library/emoji-E2D9
+        - shovel: https://openmoji.org/library/emoji-1FA8F
