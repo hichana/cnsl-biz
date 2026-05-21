@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="foot">
       <div className="wrap">
         <div className="foot-top">
           <div className="foot-brand">
-            <a className="logo" href="#top">
+            <Link className="logo" href="/">
               <span className="logo-mark">
                 <span>DJ</span>
               </span>
@@ -12,7 +14,7 @@ export function Footer() {
                 <span>DirtyJobs</span>
                 <span className="tld">.studio</span>
               </span>
-            </a>
+            </Link>
             <p className="foot-blurb">
               AI slop cleanup crew. Refactors, audits, security scans, and CTO
               oversight for founders who shipped a prototype and accidentally
@@ -29,22 +31,22 @@ export function Footer() {
             <h4>The Work</h4>
             <ul>
               <li>
-                <a href="#services">Refactoring</a>
+                <Link href="/#services">Refactoring</Link>
               </li>
               <li>
-                <a href="#services">Audits</a>
+                <Link href="/#services">Audits</Link>
               </li>
               <li>
-                <a href="#services">Bug fixes</a>
+                <Link href="/#services">Bug fixes</Link>
               </li>
               <li>
-                <a href="#services">Security scans</a>
+                <Link href="/#services">Security scans</Link>
               </li>
               <li>
-                <a href="#services">CTO oversight</a>
+                <Link href="/#services">CTO oversight</Link>
               </li>
               <li>
-                <a href="#services">Observability</a>
+                <Link href="/#services">Observability</Link>
               </li>
             </ul>
           </div>
@@ -59,13 +61,13 @@ export function Footer() {
                 <a href="#">Case studies</a>
               </li>
               <li>
-                <a href="#audit">Sample audit</a>
+                <Link href="/#audit">Sample audit</Link>
               </li>
               <li>
-                <a href="#pricing">Pricing</a>
+                <Link href="/#pricing">Pricing</Link>
               </li>
               <li>
-                <a href="#faq">FAQ</a>
+                <Link href="/#faq">FAQ</Link>
               </li>
               <li>
                 <a href="#">Careers · 2 open</a>
@@ -77,7 +79,7 @@ export function Footer() {
             <h4>Hotline</h4>
             <ul>
               <li>
-                <a href="#triage">Book triage →</a>
+                <Link href="/#triage">Book triage →</Link>
               </li>
               <li>
                 <a href="#">Emergency rate · $750/hr</a>
@@ -98,12 +100,10 @@ export function Footer() {
         </svg>
 
         <div className="foot-bot">
-          <span>© 2026 DirtyJobs LLC · Made in Austin, TX</span>
+          <span>© 2026 Dirty Jobs Studio</span>
           <div className="links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Security</a>
-            <a href="#">Status</a>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
           </div>
           <span>
             v1.0.0 · No AI was harmed in the making of this site (it deserved

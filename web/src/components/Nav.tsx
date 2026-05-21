@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export function Nav() {
   return (
     <nav className="nav">
       <div className="wrap nav-inner">
-        <a className="logo" href="#top" aria-label="DirtyJobs dot studio">
+        <Link className="logo" href="/" aria-label="Dirty Jobs dot studio">
           <span className="logo-mark">
             <span>DJ</span>
           </span>
@@ -10,17 +12,17 @@ export function Nav() {
             <span>DirtyJobs</span>
             <span className="tld">.studio</span>
           </span>
-        </a>
+        </Link>
         <div className="nav-links">
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#audit">Audit</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
+          <Link href="/#services">Services</Link>
+          <Link href="/#process">Process</Link>
+          <Link href="/#audit">Audit</Link>
+          <Link href="/#pricing">Pricing</Link>
+          <Link href="/#faq">FAQ</Link>
         </div>
-        <a className="nav-cta" href="#triage">
+        <Link className="nav-cta" href="/#triage">
           Book triage <span>→</span>
-        </a>
+        </Link>
       </div>
     </nav>
   );
