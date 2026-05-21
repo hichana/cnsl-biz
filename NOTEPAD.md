@@ -22,6 +22,9 @@
     -x favicon
     - reword copy again
 
+Reframe it all around:
+- security and observability
+- think we can assume the AI will always be 
 
 
 
