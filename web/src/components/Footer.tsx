@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -7,9 +8,13 @@ export function Footer() {
         <div className="foot-top">
           <div className="foot-brand">
             <Link className="logo" href="/">
-              <span className="logo-mark">
-                <span>DJ</span>
-              </span>
+              <Image
+                src="/assets/dj_logo_lines.svg"
+                alt=""
+                width={34}
+                height={32}
+                aria-hidden="true"
+              />
               <span className="logo-text">
                 <span>DirtyJobs</span>
                 <span className="tld">.studio</span>

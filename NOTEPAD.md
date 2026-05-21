@@ -17,17 +17,18 @@
     -x set up email
         - hello@mail.dirtyjobs.studio
         - matt@mail.dirtyjobs.studio
-    - deploy to Vercel
+    -x deploy to Vercel
         - set up custom domain
-    - favicon
+    -x favicon
     - Add Google Analytics
-    - set up
+    - set up now
         - Calendly
             - free for now, they can schedule a meeting and I'll create a payment link
         - Stripe products corresponding to DJ pricing
         - Slack
         - Hermes connected to Slack
         - Hermes with its own email
+    - set up after getting firt bite
 
 
 - http://dirtyjobs.studio
