@@ -20,9 +20,18 @@
     -x deploy to Vercel
         - set up custom domain
     -x favicon
+    - reword copy again
+
+
+
+
+    - fix current bug
     - Add Google Analytics
-    - refigure pricing
-    - set up now
+    - rethink pricing
+    - Add Calendly link functionality
+    - add platform logos to front page (in downloads folder now)
+    - Ask Adam if he can do the $2500/mo plan
+    -x set up now
         - Calendly
             - free for now, they can schedule a meeting and I'll create a payment link
     - set up after getting firt bite
@@ -30,7 +39,6 @@
         - Slack
         - Hermes connected to Slack
         - Hermes with its own email
-
 
 - http://dirtyjobs.studio
     - do as much upfront work before buying the domain and populating SquareSpace with content, setting up Stripe, and so on
