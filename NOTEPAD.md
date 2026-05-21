@@ -23,7 +23,7 @@
     - reword copy again
 
 Reframe it all around:
-- security and observability
+- security, CTO oversight and observability
 - think we can assume the AI will always be 
 
 
