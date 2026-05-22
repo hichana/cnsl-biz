@@ -18,8 +18,8 @@ export function FAQ() {
           }
           right={
             <>
-              If your question isn&apos;t here, the contact form goes straight
-              to a human who will read it within a day.
+              If your question isn&apos;t here, email
+              hello@mail.dirtyjobs.studio and just ask.
             </>
           }
         />

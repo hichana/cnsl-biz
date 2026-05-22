@@ -68,10 +68,22 @@ export function Footer() {
             <h4>Hotline</h4>
             <ul>
               <li>
-                <Link href="/#triage">Book readiness audit →</Link>
+                <a
+                  href="https://calendly.com/hello-mail-wiot/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book a call →
+                </a>
               </li>
               <li>
-                <a href="#">Emergency rate · $250/hr</a>
+                <a
+                  href="https://calendly.com/hello-mail-wiot/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Emergency session →
+                </a>
               </li>
             </ul>
           </div>

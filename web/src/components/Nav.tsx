@@ -25,9 +25,14 @@ export function Nav() {
           <Link href="/#pricing">Pricing</Link>
           <Link href="/#faq">FAQ</Link>
         </div>
-        <Link className="nav-cta" href="/#triage">
-          Book audit <span>→</span>
-        </Link>
+        <a
+          className="nav-cta"
+          href="https://calendly.com/hello-mail-wiot/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book a call <span>→</span>
+        </a>
       </div>
     </nav>
   );

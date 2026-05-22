@@ -62,8 +62,13 @@ export function Hero({
             </p>
 
             <div className="hero-ctas">
-              <a className="btn btn-hazard" href="#triage">
-                Book a readiness audit <span className="arrow">→</span>
+              <a
+                className="btn btn-hazard"
+                href="https://calendly.com/hello-mail-wiot/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book a call <span className="arrow">→</span>
               </a>
             </div>
 

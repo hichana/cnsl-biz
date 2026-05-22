@@ -212,7 +212,7 @@ export const TIERS: Tier[] = [
       "AI surface review (prompts, agents, tools)",
       "Written trade-by-trade remediation plan",
     ],
-    cta: "Book the triage",
+    cta: "Book a call",
   },
   {
     kind: "trade",
@@ -228,7 +228,7 @@ export const TIERS: Tier[] = [
       "Snyk + Semgrep + manual triage",
       "Cloud & agent permission review",
     ],
-    cta: "Scope this trade",
+    cta: "Book a call",
   },
   {
     kind: "trade",
@@ -244,7 +244,7 @@ export const TIERS: Tier[] = [
       "Agent / tool-call failure analysis",
       "LLM cost & latency dashboards",
     ],
-    cta: "Scope this trade",
+    cta: "Book a call",
   },
   {
     kind: "trade",
@@ -260,7 +260,7 @@ export const TIERS: Tier[] = [
       "Vendor & tooling decisions",
       "Roadmap sanity checks",
     ],
-    cta: "Hire the Foreman",
+    cta: "Book a call",
     featured: true,
   },
 ];

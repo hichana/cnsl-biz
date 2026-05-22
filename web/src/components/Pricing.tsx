@@ -55,7 +55,12 @@ export function Pricing() {
                 three Trades below — so you arrive at the next step knowing
                 exactly where to go next.
               </p>
-              <a className="btn btn-hazard" href="#triage">
+              <a
+                className="btn btn-hazard"
+                href="https://calendly.com/hello-mail-wiot/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {triage.cta} <span className="arrow">→</span>
               </a>
             </div>
@@ -94,7 +99,9 @@ export function Pricing() {
               </ul>
               <a
                 className={`btn ${t.featured ? "btn-hazard" : "btn-ghost"}`}
-                href="#triage"
+                href="https://calendly.com/hello-mail-wiot/30min"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {t.cta} <span className="arrow">→</span>
               </a>
