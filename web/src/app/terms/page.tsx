@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "The terms that govern using the DirtyJobs.studio website and engaging Dirty Jobs Studio for security hardening, LLM observability, and Senior Engineer-level oversight.",
 };
 
-const EFFECTIVE_DATE = "May 21, 2026";
+const EFFECTIVE_DATE = "May 22, 2026";
 
 export default function TermsPage() {
   return (
@@ -98,12 +98,38 @@ export default function TermsPage() {
               <span className="num">02</span>The services
             </h2>
             <p>
-              We provide professional software services — security hardening,
-              LLM observability, Senior Engineer-level oversight, and the
-              supporting work (audits, refactors, testing, infra) that those
-              require. We are <strong>not</strong> a SaaS product, and the site
-              itself is informational. The specifics of what we do for you are
-              defined in your engagement — see Section 03.
+              We offer three distinct services we call{" "}
+              <strong>Trades</strong>, plus a one-time{" "}
+              <strong>Triage</strong> to help you figure out which Trades you
+              need and in what order:
+            </p>
+            <ul>
+              <li>
+                <strong>Triage</strong> — a 48-hour readiness audit that maps
+                your product&apos;s gaps across the three Trades and hands you a
+                prioritized remediation plan. This is the standard entry point.
+              </li>
+              <li>
+                <strong>Locks &amp; Doors</strong> — security hardening: secrets
+                out of git, RLS on, auth consolidated, dependency CVEs triaged,
+                cloud and agent permissions locked down.
+              </li>
+              <li>
+                <strong>Wiring &amp; Lights</strong> — LLM observability:
+                Sentry wired, LangSmith traces running, prompt versioning and
+                evals in place, cost and latency dashboards live.
+              </li>
+              <li>
+                <strong>The Foreman</strong> — ongoing Senior Engineer-level
+                oversight on a monthly retainer: PR review, AI-generated code
+                review, agent guardrails, vendor decisions, and roadmap sanity
+                checks.
+              </li>
+            </ul>
+            <p>
+              We are <strong>not</strong> a SaaS product, and the site itself is
+              informational. The specifics of what we do for you are defined in
+              your engagement — see Section 03.
             </p>
 
             <h2 id="engagements">
@@ -147,10 +173,11 @@ export default function TermsPage() {
                 1.5% per month or the maximum allowed by law.
               </li>
               <li>
-                Fixed-fee engagements are non-refundable once work has begun,
-                except as required by law. Retainers and prepaid blocks of hours
-                are non-refundable but unused hours roll forward for the term
-                stated in the SOW.
+                Fixed-fee engagements (the Triage and Locks &amp; Doors /
+                Wiring &amp; Lights sprints) are non-refundable once work has
+                begun, except as required by law. Monthly retainers (The
+                Foreman) are non-refundable; unused capacity in a given month
+                does not roll forward.
               </li>
               <li>
                 Emergency rates are billed in 15-minute increments from first

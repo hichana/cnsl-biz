@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "How Dirty Jobs Studio collects, uses, stores, and shares information when you visit the site or engage the crew for security, observability, or Senior Engineer oversight work.",
 };
 
-const EFFECTIVE_DATE = "May 21, 2026";
+const EFFECTIVE_DATE = "May 22, 2026";
 
 export default function PrivacyPage() {
   return (
@@ -204,6 +204,15 @@ export default function PrivacyPage() {
                 from the engagement so we can support follow-up work, but we
                 will not publish anything identifying you without consent.
               </li>
+              <li>
+                <strong>AI-assisted analysis.</strong> We use AI development
+                tools (including LLM-based agents) to review code, generate
+                reports, and produce recommendations as part of our service
+                delivery. We take care not to share secrets, credentials, or
+                identifying personal information with these tools. You are
+                responsible for scrubbing sensitive data from any materials you
+                share with us; the onboarding call will cover this.
+              </li>
             </ul>
 
             <h2 id="retention">
@@ -239,10 +248,9 @@ export default function PrivacyPage() {
             </h2>
             <p>
               The site uses a small number of cookies and similar technologies
-              for things like remembering your theme preference and aggregate
-              analytics. We don&apos;t use third-party ad trackers. You can
-              block or clear cookies in your browser; the site will still work,
-              it just won&apos;t remember your preferences between visits.
+              for aggregate analytics and site-performance measurement. We
+              don&apos;t use third-party ad trackers. You can block or clear
+              cookies in your browser without affecting site functionality.
             </p>
 
             <h2 id="security">
