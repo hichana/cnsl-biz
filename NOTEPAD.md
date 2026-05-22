@@ -13,16 +13,16 @@
 
 ## PROJECT: DIRTY JOBS:
 - Dirty Jobs full V1 completion
-    - finalize copy
+    -x finalize copy
         - Overall reframe around:
             - security, senior engineer oversight and observability
             - think we can assume the AI will always be the one to implement
-    - rethink pricing
+    -x rethink pricing
     - Add Calendly link functionality
+        - set up Calendly to use my logo and email
     - Add Google Analytics
     - add platform logos to front page (in downloads folder now)
     - add OGimage
-    - sign up for paid Calendly or free trial to get my email/brand on it
     -x set up now
         - Calendly
             - free for now, they can schedule a meeting and I'll create a payment link

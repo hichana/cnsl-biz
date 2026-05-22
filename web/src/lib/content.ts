@@ -17,7 +17,12 @@ export type ProcessStep = {
   stat: [string, string];
 };
 
-export type Platform = { mark: string; name: string; tag: string; logo: string };
+export type Platform = {
+  mark: string;
+  name: string;
+  tag: string;
+  logo: string;
+};
 
 export type Tier = {
   kind?: "triage" | "trade";
@@ -112,20 +117,85 @@ export const PROCESS: ProcessStep[] = [
 
 export const PLATFORMS: Platform[] = [
   { mark: "Sn", name: "Snyk", tag: "SCA", logo: "/assets/stack/snyk.svg" },
-  { mark: "Sg", name: "Semgrep", tag: "SAST", logo: "/assets/stack/semgrep.svg" },
+  {
+    mark: "Sg",
+    name: "Semgrep",
+    tag: "SAST",
+    logo: "/assets/stack/semgrep.svg",
+  },
   { mark: "Wo", name: "WorkOS", tag: "Auth", logo: "/assets/stack/workos.svg" },
-  { mark: "S", name: "Supabase", tag: "RLS / Auth", logo: "/assets/stack/supabase.svg" },
-  { mark: "Se", name: "Sentry", tag: "Errors", logo: "/assets/stack/sentry.svg" },
-  { mark: "Ls", name: "LangSmith", tag: "LLM traces", logo: "/assets/stack/langsmith.svg" },
-  { mark: "Lc", name: "LangChain", tag: "Agents", logo: "/assets/stack/langchain.svg" },
-  { mark: "Lg", name: "LangGraph", tag: "Workflows", logo: "/assets/stack/langgraph.svg" },
-  { mark: "Br", name: "Braintrust", tag: "Evals", logo: "/assets/stack/braintrust.svg" },
-  { mark: "▲", name: "Vercel", tag: "Deploy", logo: "/assets/stack/vercel.svg" },
-  { mark: "Cf", name: "Cloudflare", tag: "Edge", logo: "/assets/stack/cloudflare.svg" },
-  { mark: "St", name: "Stripe", tag: "Billing", logo: "/assets/stack/stripe.svg" },
-  { mark: "Ca", name: "Claude managed agents", tag: "Agents", logo: "/assets/stack/claude-managed-agents.svg" },
-  { mark: "Ha", name: "Hermes Agents", tag: "Agents", logo: "/assets/stack/hermes-agents.svg" },
-  { mark: "Gh", name: "GitHub", tag: "Reviews", logo: "/assets/stack/github.svg" },
+  {
+    mark: "S",
+    name: "Supabase",
+    tag: "RLS / Auth",
+    logo: "/assets/stack/supabase.svg",
+  },
+  {
+    mark: "Se",
+    name: "Sentry",
+    tag: "Errors",
+    logo: "/assets/stack/sentry.svg",
+  },
+  {
+    mark: "Ls",
+    name: "LangSmith",
+    tag: "LLM traces",
+    logo: "/assets/stack/langsmith.svg",
+  },
+  {
+    mark: "Lc",
+    name: "LangChain",
+    tag: "Agents",
+    logo: "/assets/stack/langchain.svg",
+  },
+  {
+    mark: "Lg",
+    name: "LangGraph",
+    tag: "Workflows",
+    logo: "/assets/stack/langgraph-color.png",
+  },
+  {
+    mark: "Br",
+    name: "Braintrust",
+    tag: "Evals",
+    logo: "/assets/stack/braintrust.jpeg",
+  },
+  {
+    mark: "▲",
+    name: "Vercel",
+    tag: "Deploy",
+    logo: "/assets/stack/vercel.png",
+  },
+  {
+    mark: "Cf",
+    name: "Cloudflare",
+    tag: "Edge",
+    logo: "/assets/stack/cloudflare.svg",
+  },
+  {
+    mark: "St",
+    name: "Stripe",
+    tag: "Billing",
+    logo: "/assets/stack/stripe.svg",
+  },
+  {
+    mark: "Ca",
+    name: "Claude managed agents",
+    tag: "Agents",
+    logo: "/assets/stack/claude-managed-agents.svg",
+  },
+  {
+    mark: "Ha",
+    name: "Hermes Agents",
+    tag: "Agents",
+    logo: "/assets/stack/hermes-agents.svg",
+  },
+  {
+    mark: "Gh",
+    name: "GitHub",
+    tag: "Reviews",
+    logo: "/assets/stack/github.png",
+  },
 ];
 
 export const TIERS: Tier[] = [
