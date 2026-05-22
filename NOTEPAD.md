@@ -18,18 +18,18 @@
             - security, senior engineer oversight and observability
             - think we can assume the AI will always be the one to implement
     -x rethink pricing
+    -x add platform logos to front page (in downloads folder now)
     - Add Calendly link functionality
         - set up Calendly to use my logo and email
     - Add Google Analytics
-    - add platform logos to front page (in downloads folder now)
-    - add OGimage
+    -x add OGimage
     -x set up now
         - Calendly
             - free for now, they can schedule a meeting and I'll create a payment link
-    - make sure Favicon is live on prod
+    -x make sure Favicon is live on prod
     - schedule some times on calendar to make it look like am unavailable at certain periods
     - reviste Privacy policy and TOS based on new content
-    - fix the before train gif
+    -x fix the before train gif
     - Ask Adam if he can do the $2500/mo plan
         - will give him my full-time hours for at least two months as I refine my internals to make the process smooth and scaleable.
 
