@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Inter, JetBrains_Mono, Caveat } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { PALETTES, SITE_CONFIG } from "@/lib/config";
 import "./globals.css";
 
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body data-tone={SITE_CONFIG.tone} data-density={SITE_CONFIG.density}>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-JM3MRB8LZ9" />
     </html>
   );
 }
