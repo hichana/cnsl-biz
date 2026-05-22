@@ -22,9 +22,14 @@ export function Process() {
           }
           right={
             <>
-              Four steps, fully transparent, no month-long discovery phase. Most
-              engagements move from &quot;signed&quot; to &quot;first PR
-              merged&quot; in under five working days.
+              Four steps, fully transparent, fully customizable to your unique
+              needs,{" "}
+              <b>
+                <em>
+                  ready to bring you into a Software Development Lifecycle
+                  you&apos;ll love.
+                </em>
+              </b>
             </>
           }
         />
@@ -33,7 +38,7 @@ export function Process() {
           <aside className="proc-aside">
             <figure className="proc-foreman">
               <div className="proc-foreman-tag">
-                <span className="ln-1">{"// INSPECTOR ON SHIFT"}</span>
+                <span className="ln-1">{"// REPORTING, ON SHIFT"}</span>
                 <span className="ln-2">@GoChanaGo</span>
                 <span className="ln-3">
                   Senior Software Engineer · ID DJS-0419
@@ -47,12 +52,11 @@ export function Process() {
                 priority
               />
             </figure>
-            <div className="proc-aside-lbl">{"// INTAKE FORM · SAMPLE"}</div>
+            <div className="proc-aside-lbl">{"// SAMPLE"}</div>
             <WorkOrderTicket />
             <div className="proc-aside-note">
-              Every engagement starts with one of these. M. fills it out on the
-              triage call, you keep a copy, nothing moves forward until
-              you&apos;ve signed off on what we found.
+              You get concise Triage Report that will clearly illustrate
+              what&apos;s wrong and how long it&apos;ll take to fix it.
             </div>
           </aside>
 

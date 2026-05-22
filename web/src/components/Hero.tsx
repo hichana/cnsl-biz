@@ -15,19 +15,19 @@ export function Hero({
           <div className="hero-head">
             <div className="hero-meta">
               <span className="eyebrow">
-                Dirty Jobs Studio, your AI Slop Cleanup Crew · License #DJS-0419
-                · Bonded &amp; insured
+                Dirty Jobs Studio · Human-In-The-Loop Safety Crew for AI
+                Builders
               </span>
             </div>
 
             {variant === "roast" && (
               <h1 className="display display-xl hero-h">
                 <span className="ln">
-                  Your AI <em>shipped</em>
+                  Your AI <em>shipped.</em>
                 </span>
-                <span className="ln">a security hole.</span>
+                <span className="ln">Now make it</span>
                 <span className="ln">
-                  We&apos;re here to <em>plug it.</em>
+                  <em>production-grade.</em>
                 </span>
               </h1>
             )}
@@ -46,23 +46,24 @@ export function Hero({
                 </span>
                 <span className="ln">Now ship it</span>
                 <span className="ln">
-                  <em>properly.</em>
+                  <em>safely.</em>
                 </span>
               </h1>
             )}
 
             <p className="hero-sub">
-              <b>Refactoring, audits, security scans, and CTO oversight</b> on
-              whatever your AI just put in production. For founders who shipped
-              a prototype and accidentally built a business.
+              <b>
+                Security hardening, LLM observability, and Senior Engineer-level
+                oversight
+              </b>{" "}
+              for founders shipping software with AI agents. We make sure what
+              your AI just put in production is safe, observable, and
+              supervised.
             </p>
 
             <div className="hero-ctas">
               <a className="btn btn-hazard" href="#triage">
-                Book a triage call <span className="arrow">→</span>
-              </a>
-              <a className="btn btn-ghost" href="#audit">
-                See a sample audit
+                Book a readiness audit <span className="arrow">→</span>
               </a>
             </div>
 

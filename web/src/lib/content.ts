@@ -1,13 +1,13 @@
-export type Tone = "roast" | "cheeky" | "serious";
+export type Tone = "roast";
 
 export type Service = {
   no: string;
   icn: string;
   title: string;
   body: string;
+  bold: string;
   roast: string;
-  cheeky: string;
-  serious: string;
+  includes?: string[];
 };
 
 export type ProcessStep = {
@@ -20,6 +20,8 @@ export type ProcessStep = {
 export type Platform = { mark: string; name: string; tag: string };
 
 export type Tier = {
+  kind?: "triage" | "trade";
+  tradeRef?: "01" | "02" | "03";
   name: string;
   price: string;
   per: string;
@@ -34,99 +36,50 @@ export type Faq = { q: string; a: string };
 export const SERVICES: Service[] = [
   {
     no: "01",
-    icn: "</>",
-    title: "Refactoring",
-    body: "We unwind the 2,400-line App.jsx your AI cheerfully copy-pasted itself into. Real modules, real names, real separation of concerns.",
-    roast: "If your file is named final-FINAL-v3-USE-THIS.jsx, please call.",
-    cheeky:
-      "Long files, tangled imports, four versions of the same component — we untangle it.",
-    serious:
-      "Modularization, naming consistency, dead-code removal, dependency hygiene.",
+    icn: "☠",
+    title: "Locks & Doors",
+    body: "Security hardening for AI-built apps. Secrets out of git, RLS turned on, auth consolidated to one provider, dependency CVEs triaged, cloud permissions tightened.",
+    bold: "We close the holes your AI didn't know it left open.",
+    roast:
+      "Your .env is in git. Has been since March. Your Stripe key is on the client. We checked.",
+    includes: [
+      "Secret scanning & rotation",
+      "Auth consolidation (Clerk / Supabase / Auth.js)",
+      "RLS, tenant isolation, PII handling",
+      "Snyk + Semgrep + manual triage",
+      "Cloud & agent permission review",
+    ],
   },
   {
     no: "02",
-    icn: "?",
-    title: "Feature Audits",
-    body: "We walk every user flow and tell you which features actually work, which ones half-work, and which ones the AI hallucinated entirely.",
-    roast:
-      'Spoiler: your "AI-powered analytics dashboard" returns Math.random().',
-    cheeky:
-      "We map every flow and grade what ships, what stalls, and what's faking it.",
-    serious:
-      "End-to-end flow validation, gap analysis, prioritized findings report.",
+    icn: "◎",
+    title: "Wiring & Lights",
+    body: "AI observability the way it actually needs to be done. Sentry for the app, LangSmith for the tracing LLM calls and seeing costs and prompt evals.",
+    bold: "We show you exactly how everything works.",
+    roast: "Traces, evals, alerts, cost visbility. You need these my friend",
+    includes: [
+      "Sentry + structured logs + alerts",
+      "LangSmith traces",
+      "Prompt versioning",
+      "Agent / tool-call failure analysis",
+      "LLM cost & latency dashboards",
+    ],
   },
   {
     no: "03",
-    icn: "DB",
-    title: "Data Stewardship",
-    body: "PII in localStorage? Public Supabase tables? Stripe keys on the client? We audit what you're storing, who can see it, and how badly that ends.",
-    roast: "Your users' phone numbers are one curl away. We checked.",
-    cheeky: "Where data lives, who can read it, and what regulators would say.",
-    serious:
-      "RLS policies, encryption at rest, retention, consent, GDPR/CCPA posture.",
-  },
-  {
-    no: "04",
-    icn: "!",
-    title: "Bug Fixes",
-    body: "“My AI is stuck in a loop trying to add a payment gateway.” We've seen it. We can read the repo and tell you why, in English.",
-    roast: 'We won\'t ask why there are 47 commits called "trying again".',
-    cheeky: "Stuck loops, regressions, payment integrations that almost work.",
-    serious:
-      "Root-cause diagnosis, targeted fixes, regression tests for what we touched.",
-  },
-  {
-    no: "05",
-    icn: "T",
-    title: "Testing",
-    body: "Unit, integration, end-to-end. We write the tests your AI swore it had written and then quietly didn't.",
-    roast: 'Your test suite is one console.log("works!") in App.jsx.',
-    cheeky:
-      "Coverage on the parts that matter — checkout, auth, anything that loses money.",
-    serious:
-      "Vitest/Jest unit, Playwright/Cypress E2E, CI integration, coverage gates.",
-  },
-  {
-    no: "06",
     icn: "C",
-    title: "CTO Oversight",
-    body: 'A senior engineer in your standup who reads PRs, says "no" to footguns, and answers the question "is this dumb?" before you ship it.',
-    roast: "Like a CTO, except we'll actually return your Slack messages.",
-    cheeky:
-      "Architecture review, hiring help, a grown-up on the technical decisions.",
-    serious:
-      "Fractional technical leadership, architectural reviews, hiring support.",
-  },
-  {
-    no: "07",
-    icn: "☠",
-    title: "Security Scans",
-    body: "SonarQube, Snyk, Semgrep on a schedule, plus a human reading the results. Turns the 1,200-finding wall of red into the 6 things that matter today.",
-    roast: "Your .env is in git. Has been since March.",
-    cheeky: "We run the scanners and triage the noise so you don't.",
-    serious:
-      "SAST, SCA, secret scanning, dependency triage, remediation roadmap.",
-  },
-  {
-    no: "08",
-    icn: "☁",
-    title: "Cloud & Infra",
-    body: "Vercel, Supabase, Cloudflare, the works. Set up properly — staging, prod, backups, env vars in one place, deploys that don't break on Sundays.",
-    roast: "Yes, you can have a staging environment. No, prod isn't one.",
-    cheeky:
-      "Environments, secrets, deploys, backups — boring stuff done right.",
-    serious:
-      "Environment topology, IaC, CI/CD, secrets management, observability hooks.",
-  },
-  {
-    no: "09",
-    icn: "◎",
-    title: "Observability",
-    body: "LangChain traces, Braintrust evals, Sentry, logs that aren't just console.error. So next time it breaks, you'll know before your user emails you.",
-    roast: "“It works on my machine” is not a monitoring strategy.",
-    cheeky: "Traces, logs, evals, alerts — eyes on the thing while you sleep.",
-    serious:
-      "LLM tracing, evals, error tracking, structured logging, SLO/alert design.",
+    title: "The Foreman",
+    body: 'The Senior Engineer your team needs, bringing a "good bones" opinionated take on your code base so your AI agent can build out new features and you can scale.',
+    bold: "We get you production-grade and keep you there.",
+    roast:
+      "We'll return all your Slack messages even without the promise of stock options.",
+    includes: [
+      "Architecture & PR review",
+      "AI-generated code review",
+      "Agent guardrails & approval gates",
+      "Vendor & tooling decisions",
+      "Roadmap sanity checks",
+    ],
   },
 ];
 
@@ -134,148 +87,158 @@ export const PROCESS: ProcessStep[] = [
   {
     no: "01",
     title: "Triage",
-    body: "You hand us the repo, the dashboard, the panic. 48 hours later we tell you what's actually broken, in plain English.",
+    body: "Bring us into the fold, tell us your biggest problem or concern. We'll break it all down into a series of discrete facts that will inform which parts of our three trades will should focus on first.",
     stat: ["TURNAROUND", "48 HRS"],
   },
   {
     no: "02",
-    title: "Audit",
-    body: "Static analysis, security scans, dependency forensics, a manual read of the parts that look suspicious. Every finding is ranked.",
-    stat: ["FINDINGS", "RANKED P0–P4"],
+    title: "Plan",
+    body: "Get a detailed plan for the work that you can confirm with your AI agent. We're ready to walk you through any part of it so you're on board.",
+    stat: ["DELIVERABLE", "Detailed plan with access to a shared Kanban board"],
   },
   {
     no: "03",
-    title: "Refactor",
-    body: "We rip out the spaghetti, leave the logic that works, write tests around it, and document what we changed and why.",
-    stat: ["DELIVERY", "WEEKLY PRs"],
+    title: "Hammer away",
+    body: "We get to work, staying in regular contact with you and sharing our progress. Each security hole closed or bug fixed is an opportunity for us to talk in plain-English, ZERO sycophancy.",
+    stat: ["BENEFIT", "Human/AI collabo level 10,000, achieved"],
   },
   {
     no: "04",
-    title: "Hand-Off",
-    body: "Docs, runbooks, deploy pipeline, a senior on Slack. You walk away with software you understand and a crew on retainer if you want one.",
-    stat: ["OUTCOME", "YOU OWN IT"],
+    title: "Plan some more",
+    body: "As your app becomes more and more production-grade, we adapt based on new issues that may have come along, new priorities for your startup. We adapt with you.",
+    stat: ["RESULT", "You outpace the competition"],
   },
 ];
 
 export const PLATFORMS: Platform[] = [
-  { mark: "▲", name: "Vercel", tag: "Deploy" },
-  { mark: "S", name: "Supabase", tag: "Backend" },
-  { mark: "Br", name: "Braintrust", tag: "Evals" },
-  { mark: "Lc", name: "LangChain", tag: "Tracing" },
+  { mark: "Sn", name: "Snyk", tag: "SCA" },
+  { mark: "Sg", name: "Semgrep", tag: "SAST" },
+  { mark: "Wo", name: "WorkOS", tag: "Auth" },
+  { mark: "S", name: "Supabase", tag: "RLS / Auth" },
   { mark: "Se", name: "Sentry", tag: "Errors" },
+  { mark: "Ls", name: "LangSmith", tag: "LLM traces" },
+  { mark: "Lc", name: "LangChain", tag: "Agents" },
+  { mark: "Lg", name: "LangGraph", tag: "Workflows" },
+  { mark: "Br", name: "Braintrust", tag: "Evals" },
+  { mark: "▲", name: "Vercel", tag: "Deploy" },
   { mark: "Cf", name: "Cloudflare", tag: "Edge" },
   { mark: "St", name: "Stripe", tag: "Billing" },
-  { mark: "Cl", name: "Clerk", tag: "Auth" },
-  { mark: "Pg", name: "Postgres", tag: "Data" },
   { mark: "Ca", name: "Claude managed agents", tag: "Agents" },
   { mark: "Ha", name: "Hermes Agents", tag: "Agents" },
-  { mark: "Gh", name: "GitHub", tag: "Agents" },
+  { mark: "Gh", name: "GitHub", tag: "Reviews" },
 ];
 
 export const TIERS: Tier[] = [
   {
+    kind: "triage",
     name: "Triage",
     price: "$250",
     per: "one-time",
-    desc: "A 90-minute audit and a written report. The fastest way to find out what's actually wrong.",
+    desc: "48-hour deep-dive. We map every gap in your product across all three Trades and hand you a prioritized, trade-by-trade remediation plan — so you know exactly which fires to put out first and what it'll cost.",
     feats: [
-      "Repo walkthrough call",
-      "Written audit (P0–P4)",
-      "Stack & infra inventory",
-      "1 week of Slack follow-up",
+      "Repo & infra walkthrough call",
+      "Security findings",
+      "Observability gap analysis",
+      "AI surface review (prompts, agents, tools)",
+      "Written trade-by-trade remediation plan",
     ],
-    cta: "Book a triage",
+    cta: "Book the triage",
   },
   {
-    name: "Cleanup",
-    price: "$2,500",
-    per: "/ month",
-    desc: '20 hours a month of senior engineering. Bug fixes, refactors, the slow drumbeat of "actually finish that".',
+    kind: "trade",
+    tradeRef: "01",
+    name: "Locks & Doors",
+    price: "$4,500",
+    per: "/ sprint",
+    desc: "4-week security hardening sprint. Secrets out of git, RLS on, auth consolidated, CVEs triaged, cloud permissions locked down.",
     feats: [
-      "20 hrs senior eng / mo",
-      "Weekly PRs & async standup",
-      "Security scans (Snyk + Semgrep)",
-      "Slack channel",
+      "Secret scanning & rotation",
+      "Auth consolidation (Clerk / Supabase / Auth.js)",
+      "RLS, tenant isolation, PII handling",
+      "Snyk + Semgrep + manual triage",
+      "Cloud & agent permission review",
     ],
-    cta: "Start cleanup",
+    cta: "Scope this trade",
   },
   {
-    name: "Crew",
-    price: "$6,500",
-    per: "/ month",
-    desc: '60 hours, a fractional CTO, full security & observability setup. For founders past the "is this an app?" phase.',
+    kind: "trade",
+    tradeRef: "02",
+    name: "Wiring & Lights",
+    price: "$3,500",
+    per: "/ sprint",
+    desc: "4-week observability sprint. Sentry live, LangSmith traces wired, cost dashboards running, evals covering your critical prompts.",
     feats: [
-      "60 hrs senior eng / mo",
-      "Fractional CTO oversight",
-      "Full security pipeline (SAST + SCA)",
-      "Observability stack (Sentry + LangChain)",
-      "Architecture reviews",
+      "Sentry + structured logs + alerts",
+      "LangSmith traces wired",
+      "Prompt versioning & eval suites",
+      "Agent / tool-call failure analysis",
+      "LLM cost & latency dashboards",
     ],
-    cta: "Hire the crew",
+    cta: "Scope this trade",
+  },
+  {
+    kind: "trade",
+    tradeRef: "03",
+    name: "The Foreman",
+    price: "$4,500",
+    per: "/ month",
+    desc: "Senior Engineer on retainer. PRs reviewed, dashboards watched, agent failures triaged. The ongoing oversight layer your AI-built app actually needs.",
+    feats: [
+      "Architecture & PR review",
+      "AI-generated code review",
+      "Agent guardrails & approval gates",
+      "Vendor & tooling decisions",
+      "Roadmap sanity checks",
+    ],
+    cta: "Hire the Foreman",
     featured: true,
-  },
-  {
-    name: "Demolition",
-    price: "Custom",
-    per: "scoped",
-    desc: 'When "refactor" stops being honest. We tear it down to load-bearing logic and rebuild it properly.',
-    feats: [
-      "Full rewrite or replatform",
-      "Dedicated team",
-      "Migration & data plan",
-      "White-glove handover",
-    ],
-    cta: "Talk to us",
   },
 ];
 
 export const FAQS: Faq[] = [
   {
-    q: "I built it with Cursor / Bolt / Lovable. Will you still touch it?",
-    a: "Yes. We don't care which copilot wrote it; we care whether it's the kind of mess we can clean. Most of the time, the answer is yes. We've seen worse than yours.",
+    q: "I built it with Cursor / Bolt / Lovable / Claude Code. Will you still touch it?",
+    a: "Yes. We don't care what you used. We care will continue to use them if it makes sense for you and your goals, or we'll guide you to use something better.",
   },
   {
-    q: "Are you going to publicly roast my code?",
-    a: "No. We are professionally roast-y on the marketing site; in the actual engagement we are kind, NDA-bound, and somewhat disappointed only in private.",
+    q: "Are you a dev shop, or consultants?",
+    a: "No, we sell three products we call 'Trades', each with their own subset of features. Our AI agents and your AI agents are the ones who still do the heavy lifting as we steer them towards best practices that are now clear in the age of AI-assisted software development.",
   },
   {
-    q: "My AI rewrote the same function fourteen times. Help.",
-    a: "Classic. We diff the versions, pick the one that's closest to correct, delete the other thirteen, and write a test so it never regenerates them. Total job: usually under a day.",
-  },
-  {
-    q: "Can you actually set up auth properly? I have three half-finished attempts.",
-    a: "Yes. We'll consolidate to one provider (Clerk, Supabase Auth, Auth.js — your call or ours), wire up session, roles, and password reset, and remove the other two attempts. Two to four days, typically.",
+    q: "Do you sign NDAs? How do you handle access?",
+    a: "Yes. A mutual NDA on the way in is no problem. We work from named engineer accounts with least-privilege scopes, we never reference clients by name without explicit written permission, and we don't publish before/afters of your repo. We remove ourselves from your repos and services on the day the engagement ends.",
   },
   {
     q: "How fast can you start?",
-    a: "Triage in 48 hours from a signed engagement. Real work on the codebase usually starts the same week. We don't do month-long discovery phases.",
+    a: "Readiness audit kickoff within 48 hours of payment. Work starts very shortly after that. We don't do month-long discovery phases, we have AI for that.",
   },
   {
-    q: "Will you teach me what's broken, or just fix it?",
-    a: "Both. Every PR has a plain-English summary, every audit comes with a walkthrough call. You'll know what we changed, why, and how to spot the same mistake next time. You hired a crew, not a black box.",
-  },
-  {
-    q: "Do you sign NDAs?",
-    a: "Always. Standard mutual NDA on the way in, we never reference clients by name without explicit written permission, and we don't publish before/afters of your repo.",
+    q: "We have a Senior Engineer. Do we still need the Foreman?",
+    a: "Plenty of teams could use an on-demand injection of technical talent who can fill in the gaps as-needed. Let your current engineers focus on what they're good at, let us do what they don't want to or can't.",
   },
 ];
 
 export const MARQUEE_TOP: string[] = [
-  "INFINITE LOOP DETECTED",
+  "AGENT TOOL CALL: undefined()",
+  "PROMPT DRIFT UNCAUGHT FOR 14 DAYS",
+  "EVAL COVERAGE: 0 PROMPTS",
+  "LLM SPEND: 47× BUDGET",
+  "SENTRY: 0 EVENTS CAPTURED",
+  "HUMAN-IN-LOOP: DISABLED IN PROD",
+  "AI MERGED ITS OWN PR",
   "AUTH MIDDLEWARE: TODO (3 MO. AGO)",
   ".ENV.LOCAL COMMITTED",
-  "0% TEST COVERAGE",
-  "useEffect() RUNNING 1,400x",
-  "CORS: *",
-  "ROW LEVEL SECURITY: DISABLED",
-  'console.log("WORKS!")',
   "STRIPE_SECRET_KEY EXPOSED",
+  "ROW LEVEL SECURITY: DISABLED",
+  "CORS: *",
   "NPM AUDIT: 412 VULNS",
+  "INFINITE LOOP DETECTED",
+  'console.log("WORKS!")',
 ];
 
 export const MARQUEE_CTA: string[] = [
-  "Book a triage call",
-  "We clean up after your AI",
-  "Refactor. Audit. Sleep.",
+  "Book a readiness audit",
+  "Production oversight for AI-built apps",
+  "Secure. Observe. Govern.",
   "Your AI shipped a security hole",
 ];

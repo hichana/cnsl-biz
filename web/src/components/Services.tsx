@@ -9,8 +9,21 @@ export function Services({ tone }: { tone: Tone }) {
         <SecHead
           no="01"
           kicker="The Work"
-          title={<>Nine kinds of <em style={{ fontStyle: "italic", color: "var(--accent)" }}>dirty jobs.</em></>}
-          right={<>Pick the one that hurts most. We do all of them. Most engagements end up touching three or four because the symptoms cluster.</>}
+          title={
+            <>
+              Three trades.{" "}
+              <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
+                One crew.
+              </em>
+            </>
+          }
+          right={
+            <>
+              Production oversight for AI-built software, offered in three
+              parts. Choose the one you need most now, or have us knock out
+              issues one after the other.
+            </>
+          }
         />
 
         <div className="svc-grid">
@@ -22,7 +35,15 @@ export function Services({ tone }: { tone: Tone }) {
               </div>
               <h3>{s.title}</h3>
               <p>{s.body}</p>
-              <div className="quote">{s[tone] || s.roast}</div>
+              <em>{s.bold}</em>
+              {s.includes && (
+                <ul className="svc-includes">
+                  {s.includes.map((it, i) => (
+                    <li key={i}>{it}</li>
+                  ))}
+                </ul>
+              )}
+              <div className="quote">{s.roast}</div>
             </article>
           ))}
         </div>

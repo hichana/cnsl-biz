@@ -12,36 +12,42 @@
         - Make Japanese CV
 
 ## PROJECT: DIRTY JOBS:
-- need
-    -x customize copy throughout
-    -x set up email
-        - hello@mail.dirtyjobs.studio
-        - matt@mail.dirtyjobs.studio
-    -x deploy to Vercel
-        - set up custom domain
-    -x favicon
-    - reword copy again
-
-Reframe it all around:
-- security, CTO oversight and observability
-- think we can assume the AI will always be 
-
-
-
-    - fix current bug
-    - Add Google Analytics
+- Dirty Jobs full V1 completion
+    - finalize copy
+        - Overall reframe around:
+            - security, senior engineer oversight and observability
+            - think we can assume the AI will always be the one to implement
     - rethink pricing
     - Add Calendly link functionality
+    - Add Google Analytics
     - add platform logos to front page (in downloads folder now)
-    - Ask Adam if he can do the $2500/mo plan
+    - add OGimage
+    - sign up for paid Calendly or free trial to get my email/brand on it
     -x set up now
         - Calendly
             - free for now, they can schedule a meeting and I'll create a payment link
-    - set up after getting firt bite
-        - Stripe products corresponding to DJ pricing
-        - Slack
-        - Hermes connected to Slack
-        - Hermes with its own email
+    - make sure Favicon is live on prod
+    - schedule some times on calendar to make it look like am unavailable at certain periods
+    - reviste Privacy policy and TOS based on new content
+    - fix the before train gif
+    - Ask Adam if he can do the $2500/mo plan
+        - will give him my full-time hours for at least two months as I refine my internals to make the process smooth and scaleable.
+
+
+
+
+
+- marketing idea
+    - make the trades framework open source, put it on Github and extend it to the community. 
+
+
+
+
+- Dirty Jobs V2 completion (after getting firt bite)
+    - Stripe products corresponding to DJ pricing
+    - Slack
+    - Hermes connected to Slack
+    - Hermes with its own email
 
 - http://dirtyjobs.studio
     - do as much upfront work before buying the domain and populating SquareSpace with content, setting up Stripe, and so on
@@ -348,3 +354,12 @@ Some clients will try to bypass the model. Use these structural policies to hand
     - emoji options
         - hazmat guy: https://openmoji.org/library/emoji-E2D9
         - shovel: https://openmoji.org/library/emoji-1FA8F
+- need
+    -x customize copy throughout
+    -x set up email
+        - hello@mail.dirtyjobs.studio
+        - matt@mail.dirtyjobs.studio
+    -x deploy to Vercel
+        - set up custom domain
+    -x favicon
+

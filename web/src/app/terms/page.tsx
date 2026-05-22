@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Terms of Service — DirtyJobs.studio",
   description:
-    "The terms that govern using the DirtyJobs.studio website and engaging Dirty Jobs Studio for refactors, audits, security scans, and CTO oversight.",
+    "The terms that govern using the DirtyJobs.studio website and engaging Dirty Jobs Studio for security hardening, LLM observability, and Senior Engineer-level oversight.",
 };
 
 const EFFECTIVE_DATE = "May 21, 2026";
@@ -89,20 +89,21 @@ export default function TermsPage() {
               <strong>&ldquo;Dirty Jobs&rdquo;</strong>,{" "}
               <strong>&ldquo;we&rdquo;</strong>,{" "}
               <strong>&ldquo;us&rdquo;</strong>). By using dirtyjobs.studio,
-              booking triage, or engaging us for cleanup work, you agree to
-              these Terms. If you don&apos;t, stop using the site and don&apos;t
-              engage us.
+              booking an audit, or engaging us for production oversight work,
+              you agree to these Terms. If you don&apos;t, stop using the site
+              and don&apos;t engage us.
             </p>
 
             <h2 id="services">
               <span className="num">02</span>The services
             </h2>
             <p>
-              We provide professional software services — refactoring, audits,
-              bug fixes, security scans, CTO oversight, observability work, and
-              related advisory. We are <strong>not</strong> a SaaS product, and
-              the site itself is informational. The specifics of what we do for
-              you are defined in your engagement — see Section 03.
+              We provide professional software services — security hardening,
+              LLM observability, Senior Engineer-level oversight, and the
+              supporting work (audits, refactors, testing, infra) that those
+              require. We are <strong>not</strong> a SaaS product, and the site
+              itself is informational. The specifics of what we do for you are
+              defined in your engagement — see Section 03.
             </p>
 
             <h2 id="engagements">

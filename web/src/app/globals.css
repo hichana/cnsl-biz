@@ -864,6 +864,32 @@ section {
 .svc:nth-child(3n) {
   border-right: 0;
 }
+.svc-grid > .svc:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
+.svc-includes {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+.svc-includes li {
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--ink-mute);
+  padding-left: 18px;
+  position: relative;
+}
+.svc-includes li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+}
 .svc-hd {
   display: flex;
   justify-content: space-between;
@@ -1189,6 +1215,77 @@ section {
   font-size: 38px;
   line-height: 1;
 }
+.audit-gif {
+  position: relative;
+  border: 1px solid var(--border-2);
+  background: #0a0a09;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+}
+.audit-gif::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 6px;
+  z-index: 2;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--hazard) 0 10px,
+    #0a0a09 10px 20px
+  );
+}
+.audit-gif img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 393 / 229;
+  object-fit: cover;
+  margin-top: 6px;
+  background: #0a0a09;
+}
+.audit-col.after .audit-gif::before {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--toxic) 0 10px,
+    #0a0a09 10px 20px
+  );
+}
+.audit-gif figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+  padding: 10px 14px;
+  border-top: 1px dashed var(--border-2);
+  background: #0e0e0c;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.audit-gif figcaption .lbl {
+  color: var(--ink-dim);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+.audit-gif figcaption .cap {
+  color: var(--ink);
+  text-align: right;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+}
+.audit-col.after .audit-gif figcaption .cap {
+  color: var(--toxic);
+}
+.audit-col.before .audit-gif figcaption .cap {
+  color: var(--blood);
+}
+
 .audit-list {
   display: flex;
   flex-direction: column;
@@ -1245,7 +1342,7 @@ section {
 /* ─── PLATFORMS ──────────────────────────────────────────────────────────── */
 .platforms {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0;
   border: 1px solid var(--border);
 }
@@ -1274,8 +1371,24 @@ section {
 .plat:hover {
   background: var(--surface);
 }
-.plat:nth-child(6n) {
+.plat:nth-child(5n) {
   border-right: 0;
+}
+@media (max-width: 820px) {
+  .plat {
+    border-right: 1px solid var(--border);
+  }
+  .plat:nth-child(3n) {
+    border-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .plat {
+    border-right: 1px solid var(--border);
+  }
+  .plat:nth-child(2n) {
+    border-right: 0;
+  }
 }
 .plat-mark {
   width: 36px;
@@ -1305,9 +1418,144 @@ section {
 }
 
 /* ─── PRICING ────────────────────────────────────────────────────────────── */
+
+/* step labels (used in triage + flow connector) */
+.pricing-step {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.pricing-step-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+/* triage — full-width "start here" card */
+.pricing-triage {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  margin-bottom: 0;
+  position: relative;
+}
+.pricing-triage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 4px;
+  background: var(--accent);
+}
+.pricing-triage-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px 0;
+}
+.pricing-triage-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  padding: 22px 28px 32px;
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .pricing-triage-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+.pricing-triage-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+.pricing-triage-output {
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--ink-dim);
+  border-left: 2px solid var(--border-2);
+  padding-left: 14px;
+}
+
+/* flow connector between triage and trades */
+.pricing-flow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 0 24px;
+}
+.pricing-flow-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.pricing-flow-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+}
+
+/* bundle note */
+.pricing-bundle {
+  margin-top: 0;
+  border: 1px solid var(--border);
+  border-top: 0;
+  padding: 16px 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  background: var(--bg-2);
+}
+.pricing-bundle-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.pricing-bundle-text {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--ink-mute);
+  line-height: 1.55;
+}
+.pricing-bundle-text strong {
+  color: var(--ink);
+}
+@media (max-width: 640px) {
+  .pricing-bundle {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* trade number label inside tier card */
+.tier-trade-no {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: -8px;
+}
+
 .tiers {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border: 1px solid var(--border);
 }
@@ -1792,19 +2040,7 @@ section {
 }
 
 /* tone-dial state injection */
-body[data-tone="serious"] .hide-serious {
-  display: none !important;
-}
-body[data-tone="cheeky"] .hide-cheeky {
-  display: none !important;
-}
 body[data-tone="roast"] .hide-roast {
-  display: none !important;
-}
-body:not([data-tone="serious"]) .show-serious {
-  display: none !important;
-}
-body:not([data-tone="cheeky"]) .show-cheeky {
   display: none !important;
 }
 body:not([data-tone="roast"]) .show-roast {

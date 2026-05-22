@@ -18,10 +18,9 @@ export function Platforms() {
           }
           right={
             <>
-              We&apos;re stack-agnostic on what you&apos;ve built, opinionated
-              on what plugs into it. These are just some of the tools we reach
-              for first. Whatever you&apos;re on, we&apos;ll meet it where it
-              is.
+              We&apos;re stack-agnostic, but we can and will guide your
+              architecture so that it&apos;s great. Here are some great ones in
+              our quiver.
             </>
           }
         />

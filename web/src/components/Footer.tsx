@@ -21,9 +21,10 @@ export function Footer() {
               </span>
             </Link>
             <p className="foot-blurb">
-              AI slop cleanup crew. Refactors, audits, security scans, and CTO
-              oversight for founders who shipped a prototype and accidentally
-              built a business.
+              Production oversight for AI-built software. Security hardening,
+              LLM observability, and Senior Engineer-level engineering judgement
+              for founders who shipped a prototype and accidentally built a
+              business.
             </p>
             <div className="foot-meta">
               <a href="mailto:hello@dirtyjobs.studio">
@@ -36,22 +37,17 @@ export function Footer() {
             <h4>The Work</h4>
             <ul>
               <li>
-                <Link href="/#services">Refactoring</Link>
+                <Link href="/#services">Locks &amp; Doors · Security</Link>
               </li>
               <li>
-                <Link href="/#services">Audits</Link>
+                <Link href="/#services">
+                  Wiring &amp; Lights · Observability
+                </Link>
               </li>
               <li>
-                <Link href="/#services">Bug fixes</Link>
-              </li>
-              <li>
-                <Link href="/#services">Security scans</Link>
-              </li>
-              <li>
-                <Link href="/#services">CTO oversight</Link>
-              </li>
-              <li>
-                <Link href="/#services">Observability</Link>
+                <Link href="/#services">
+                  The Foreman · Senior Engineer Oversight
+                </Link>
               </li>
             </ul>
           </div>
@@ -60,22 +56,10 @@ export function Footer() {
             <h4>The Crew</h4>
             <ul>
               <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Case studies</a>
-              </li>
-              <li>
-                <Link href="/#audit">Sample audit</Link>
-              </li>
-              <li>
                 <Link href="/#pricing">Pricing</Link>
               </li>
               <li>
                 <Link href="/#faq">FAQ</Link>
-              </li>
-              <li>
-                <a href="#">Careers · 2 open</a>
               </li>
             </ul>
           </div>
@@ -84,10 +68,10 @@ export function Footer() {
             <h4>Hotline</h4>
             <ul>
               <li>
-                <Link href="/#triage">Book triage →</Link>
+                <Link href="/#triage">Book readiness audit →</Link>
               </li>
               <li>
-                <a href="#">Emergency rate · $750/hr</a>
+                <a href="#">Emergency rate · $250/hr</a>
               </li>
             </ul>
           </div>

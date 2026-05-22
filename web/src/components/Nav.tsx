@@ -26,7 +26,7 @@ export function Nav() {
           <Link href="/#faq">FAQ</Link>
         </div>
         <Link className="nav-cta" href="/#triage">
-          Book triage <span>→</span>
+          Book audit <span>→</span>
         </Link>
       </div>
     </nav>

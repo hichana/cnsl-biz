@@ -32,9 +32,9 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "DirtyJobs.studio — We clean up after your AI",
+  title: "DirtyJobs.studio — Production oversight for AI-built software",
   description:
-    "AI slop cleanup crew for founders who shipped fast. Refactors, audits, security scans, and CTO oversight on whatever your AI just shipped to production.",
+    "Security hardening, LLM observability, and Senior Engineer-level oversight for founders shipping with AI agents. We make sure what your AI put in production is safe, observable, and supervised.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -50,7 +50,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const accent = PALETTES[SITE_CONFIG.palette].accent;
   const htmlClassName = `${anton.variable} ${inter.variable} ${jetbrainsMono.variable} ${caveat.variable}`;
-  const accentStyle = { "--accent": accent, "--hazard": accent } as React.CSSProperties;
+  const accentStyle = {
+    "--accent": accent,
+    "--hazard": accent,
+  } as React.CSSProperties;
 
   return (
     <html lang="en" className={htmlClassName} style={accentStyle}>

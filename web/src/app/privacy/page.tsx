@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy — DirtyJobs.studio",
   description:
-    "How Dirty Jobs Studio collects, uses, stores, and shares information when you visit the site or engage the cleanup crew.",
+    "How Dirty Jobs Studio collects, uses, stores, and shares information when you visit the site or engage the crew for security, observability, or Senior Engineer oversight work.",
 };
 
 const EFFECTIVE_DATE = "May 21, 2026";
@@ -27,9 +27,9 @@ export default function PrivacyPage() {
 
           <div className="legal-body">
             <p className="lead">
-              We&apos;re a small cleanup crew, not an ad network. We collect
-              what we need to talk to you, do the work you hired us for, run the
-              site, and keep the lawyers happy. Nothing creepier than that.
+              We&apos;re a small crew, not an ad network. We collect what we
+              need to talk to you, do the work you hired us for, run the site,
+              and keep the lawyers happy. Nothing creepier than that.
             </p>
 
             <div className="legal-toc">
@@ -77,7 +77,8 @@ export default function PrivacyPage() {
               <strong>&ldquo;us&rdquo;</strong>, or{" "}
               <strong>&ldquo;Dirty Jobs&rdquo;</strong>, it means Dirty Jobs
               Studio. When it says <strong>&ldquo;you&rdquo;</strong>, it means
-              the person visiting the site or engaging us for cleanup work.
+              the person visiting the site or engaging us for production
+              oversight work.
             </p>
 
             <h2 id="what">
@@ -87,7 +88,7 @@ export default function PrivacyPage() {
             <ul>
               <li>
                 <strong>Contact details</strong> — name, email, company, and
-                anything else you put in a triage booking, intake form, or
+                anything else you put in an audit booking, intake form, or
                 email.
               </li>
               <li>
@@ -128,10 +129,10 @@ export default function PrivacyPage() {
               <span className="num">03</span>How we use it
             </h2>
             <ul>
-              <li>To respond to triage requests and quote work.</li>
+              <li>To respond to audit requests and quote work.</li>
               <li>
-                To actually do the work — refactors, audits, security scans, CTO
-                oversight, and the rest of the menu.
+                To actually do the work — security hardening, LLM observability,
+                Senior Engineer oversight, and the rest of the menu.
               </li>
               <li>To send invoices, receipts, and engagement-related email.</li>
               <li>
