@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PLATFORMS } from "@/lib/content";
 import { SecHead } from "./SecHead";
 
@@ -27,7 +28,9 @@ export function Platforms() {
         <div className="platforms">
           {PLATFORMS.map((p) => (
             <div className="plat" key={p.name}>
-              <div className="plat-mark">{p.mark}</div>
+              <div className="plat-mark">
+                <Image src={p.logo} alt={p.name} width={40} height={40} style={{ height: "auto" }} />
+              </div>
               <div className="plat-name">{p.name}</div>
               <div className="plat-tag">{p.tag}</div>
             </div>
