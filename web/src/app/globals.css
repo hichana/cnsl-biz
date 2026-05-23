@@ -1657,6 +1657,223 @@ section {
   justify-content: center;
 }
 
+/* ─── PRICING · THE CREW (subscription card) ─────────────────────────────── */
+.pricing-crew {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  position: relative;
+}
+.pricing-crew::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 4px;
+  background: var(--accent);
+}
+.pricing-crew-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px 0;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.pricing-crew-tag-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(245, 229, 10, 0.18);
+  animation: crewPulse 2.4s ease-in-out infinite;
+}
+@keyframes crewPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(245, 229, 10, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(245, 229, 10, 0.05);
+  }
+}
+
+.pricing-crew-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 0;
+  padding: 0;
+}
+@media (max-width: 880px) {
+  .pricing-crew-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pricing-crew-left {
+  padding: 22px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-right: 1px solid var(--border-2);
+}
+@media (max-width: 880px) {
+  .pricing-crew-left {
+    border-right: 0;
+    border-bottom: 1px solid var(--border-2);
+  }
+}
+.pricing-crew-tagline {
+  font-family: var(--f-display);
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-top: -6px;
+}
+
+.pricing-crew-trades {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px dashed var(--border-2);
+  margin-top: 8px;
+}
+.pricing-crew-trade {
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--border-2);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 18px;
+  align-items: baseline;
+}
+.pricing-crew-trade:last-child {
+  border-bottom: 0;
+}
+.pricing-crew-trade-no {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.pricing-crew-trade-name {
+  font-family: var(--f-display);
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 1.1;
+}
+.pricing-crew-trade-blurb {
+  grid-column: 2;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-mute);
+  margin-top: 4px;
+}
+@media (max-width: 520px) {
+  .pricing-crew-trade {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .pricing-crew-trade-blurb {
+    grid-column: 1;
+  }
+}
+
+.pricing-crew-right {
+  padding: 22px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+}
+.pricing-crew-badge {
+  align-self: flex-start;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0a0a09;
+  background: var(--accent);
+  padding: 5px 10px;
+  font-weight: 700;
+}
+.pricing-crew-price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pricing-crew-price-was {
+  font-family: var(--f-mono);
+  font-size: 14px;
+  color: var(--ink-dim);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent);
+}
+.pricing-crew-price-now {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.pricing-crew-price-now .p {
+  font-family: var(--f-display);
+  font-size: 64px;
+  line-height: 0.9;
+}
+.pricing-crew-price-now .per {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.pricing-crew-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-2);
+  margin-top: 4px;
+  list-style: none;
+}
+.pricing-crew-benefits li {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--ink);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.pricing-crew-benefits li::before {
+  content: "+";
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.pricing-crew-cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.pricing-crew-guarantee {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--ink-dim);
+  border-left: 2px solid var(--border-2);
+  padding-left: 12px;
+}
+
 /* ─── FAQ ────────────────────────────────────────────────────────────────── */
 .faq {
   border: 1px solid var(--border);

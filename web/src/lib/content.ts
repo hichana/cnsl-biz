@@ -36,6 +36,26 @@ export type Tier = {
   featured?: boolean;
 };
 
+export type CrewTrade = {
+  ref: "01" | "02" | "03";
+  name: string;
+  blurb: string;
+};
+
+export type CrewSub = {
+  name: string;
+  tagline: string;
+  desc: string;
+  priceNow: string;
+  priceWas: string;
+  per: string;
+  badge: string;
+  trades: CrewTrade[];
+  benefits: string[];
+  cta: string;
+  guarantee: string;
+};
+
 export type Faq = { q: string; a: string };
 
 export const SERVICES: Service[] = [
@@ -214,56 +234,48 @@ export const TIERS: Tier[] = [
     ],
     cta: "Book a call",
   },
-  {
-    kind: "trade",
-    tradeRef: "01",
-    name: "Locks & Doors",
-    price: "$4,500",
-    per: "/ sprint",
-    desc: "4-week security hardening sprint. Secrets out of git, RLS on, auth consolidated, CVEs triaged, cloud permissions locked down.",
-    feats: [
-      "Secret scanning & rotation",
-      "Auth consolidation (Clerk / Supabase / Auth.js)",
-      "RLS, tenant isolation, PII handling",
-      "Snyk + Semgrep + manual triage",
-      "Cloud & agent permission review",
-    ],
-    cta: "Book a call",
-  },
-  {
-    kind: "trade",
-    tradeRef: "02",
-    name: "Wiring & Lights",
-    price: "$3,500",
-    per: "/ sprint",
-    desc: "4-week observability sprint. Sentry live, LangSmith traces wired, cost dashboards running, evals covering your critical prompts.",
-    feats: [
-      "Sentry + structured logs + alerts",
-      "LangSmith traces wired",
-      "Prompt versioning & eval suites",
-      "Agent / tool-call failure analysis",
-      "LLM cost & latency dashboards",
-    ],
-    cta: "Book a call",
-  },
-  {
-    kind: "trade",
-    tradeRef: "03",
-    name: "The Foreman",
-    price: "$4,500",
-    per: "/ month",
-    desc: "Senior Engineer on retainer. PRs reviewed, dashboards watched, agent failures triaged. The ongoing oversight layer your AI-built app actually needs.",
-    feats: [
-      "Architecture & PR review",
-      "AI-generated code review",
-      "Agent guardrails & approval gates",
-      "Vendor & tooling decisions",
-      "Roadmap sanity checks",
-    ],
-    cta: "Book a call",
-    featured: true,
-  },
 ];
+
+export const CREW: CrewSub = {
+  name: "The Crew",
+  tagline: "One subscription. All three Trades on call.",
+  desc: "Drop work orders in our queue, get security holes fixed, AI observability set up, and a Senior Engineer guided roadmap so you can scale. When you're quiet, you pause the clock. When you're shipping again, you flip it back on.",
+  priceNow: "$4,900",
+  priceWas: "$5,900",
+  per: "/ month",
+  badge: "Lifetime founder rate — limited slots",
+  trades: [
+    {
+      ref: "01",
+      name: "Locks & Doors",
+      blurb:
+        "Security, auth, database, permissions. We will make your app secure and you'll feel the same.",
+    },
+    {
+      ref: "02",
+      name: "Wiring & Lights",
+      blurb:
+        "Error tracing, AI cost and prompt observability, prompt versioning. Know what's actually happening in the critical parts of your app.",
+    },
+    {
+      ref: "03",
+      name: "The Foreman",
+      blurb:
+        "Architecture, analysis of the tools and services your app uses, roadmaps. Tell potential investors you have a Senior Engineer working right now.",
+    },
+  ],
+  benefits: [
+    "One work order at a time",
+    "48-hour response on every order",
+    "Pause or cancel anytime",
+    "Unlimited orders in your queue",
+    "Senior Engineer, no junior handoffs",
+    "All three Trades, one flat rate",
+  ],
+  cta: "Hire the crew",
+  guarantee:
+    "Try us for a week. Not feeling it? Get 75% back, no hard feelings.",
+};
 
 export const FAQS: Faq[] = [
   {
