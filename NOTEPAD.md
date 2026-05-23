@@ -12,84 +12,55 @@
         - Make Japanese CV
 
 ## PROJECT: DIRTY JOBS:
-- Dirty Jobs full V1 completion
-    -x finalize copy
-        - Overall reframe around:
-            - security, senior engineer oversight and observability
-            - think we can assume the AI will always be the one to implement
-    -x rethink pricing
-    -x add platform logos to front page (in downloads folder now)
-    -x Add Google Analytics
-    - Add Calendly link functionality
-        - set up Calendly to use my logo and email
-    -x add OGimage
-    -x set up now
-        - Calendly
-            - free for now, they can schedule a meeting and I'll create a payment link
-    -x make sure Favicon is live on prod
-    - schedule some times on calendar to make it look like am unavailable at certain periods
-    -x reviste Privacy policy and TOS based on new content
-    -x fix the before train gif
-    - Ask Adam if he can do the $2500/mo plan
+- goal today
+    -x make instead a 15 minute intro call
+    - refactor pricing, make an intro offer on the site
+        - make sure CC can use MCP server to
+            - view our current site,
+            - the DesignJoy site's pricing model
+        - copy DesignJoy's model
+        - "get an immediate Senior Engineer"
+        - "live pair co-working"
+    - post about it all on LinkedIn, post on X
+        - "Hermes agent has made the 'unlimited design studio' idea a reality. In my case I'm not selling graphic design, I'm basically selling Senior engineer level oversight for AI builders..."
+        - get AI to make Excalidraw diagram for me
+        - actually, just write a post both on X and LinkedIn about this, before I even build it!
+        - I started an "unlimited" solo studio, here's how I plan on making it work (or something like that)
+
+
+    - update Hermes agent, find out what's new
+- set up my internal stack (this is the innovation I can bring):
+    - Hermes agent triage
+        - has its own email (if get a bite/paying customer, just sign up for AgentMail and hook up the dirtyjobs, make a new subdomain for the agent email addresses like 'talk.dirtyjobs.studio', problem solved)
+        - is connected to Slack
+        - works with Calendly via MCP
+        - manages the kanban board
+            - field client emails
+            - scoping, decomposition
+            - task creation and management
+        - does email updates to the client
+        - communicates with me, often as an "employee" who then communicates with the client for us
+- possible contact asks:
+    - Adam
         - will give him my full-time hours for at least two months as I refine my internals to make the process smooth and scaleable.
-
-
-
-
-
+        - maybe I can use his Studio OS to run it, frame as if I'm buildling a studio and was inspired by StudioOS
+    - Maybe ask Beamer if he's be open to me doing a free month of service (would let me test out the automations)
 - marketing idea
     - make the trades framework open source, put it on Github and extend it to the community. 
-
-
-
-
 - Dirty Jobs V2 completion (after getting firt bite)
-    - Stripe products corresponding to DJ pricing
-    - Slack
-    - Hermes connected to Slack
-    - Hermes with its own email
-
-- http://dirtyjobs.studio
-    - do as much upfront work before buying the domain and populating SquareSpace with content, setting up Stripe, and so on
-- Business: Productized AI Slop cleanup targeting non-technical founders who built applications using AI
-- Internal tools
-    - Calendly
-- Services
-    - refactoring
-    - feature and functionality audits
-    - user data stewardship audits
-    - bug fixes
-        - "My AI is stuck in a loop trying to add a payment gateway; audit this repository file and tell me why it's breaking."
-    - testing (unit, integration, e2e)
-    - CTO oversight, architectural validation
-    - security scans (we proxy to other API services like either through API or we just use our own sub)
-        - https://www.sonarsource.com/products/sonarqube/
-        - Snyk
-        - https://semgrep.dev
-    - cloud services/infrastructure setup and management (Vercel, Supabase, etc.)
-    - Observability (LangChain, Braintrust, etc.)
-- website
-    - inspired by https://upcode.com/unlimited
-    - use the example of the train going off the tracks meme -- "Is this how your app probably works?" -- "There's a difference between 'it works' and 'It WORKS!!!'"
-    - use Squarespace: For a limited time, take 20% off any new website plan. Use code at checkout: MAY20WF
-    - if traction, can incrementally build my own platform and billing
-    - needs an ironclad TOS and privacy policy to protect us
-    - for hourly, set up Calendly upfront meeting payments: https://calendly.com/payments
-- email
-    - set it up in Maileroo to forward to my GMAIL
-- SNS
-    - TikTok videos on code walkthroughs targeting vibe coders
-    - mayb use a service that does UGC to make vertical influencer videos
-- experiment
-    - do a free trials, ask Adam first if he'd be willing to help out. All I'd be asking him for is to tell me how the free trial goes so I know how to approach it for others. I don't see him as a subscriber unless he actually needs it.
-    - Maybe show to Adam, ask how much he'd be willing to pay and if he's interested
-        - maybe I can use his Studio OS to run it, frame as if I'm buildling a studio and was inspired by StudioOS
-    - going above and beyond for initial customers will be key
-    - find trusted initial customers who won't abuse the system
+    - Set up Stripe products corresponding to DJ pricing
+    - actually build the internal stack
+- security scans (we proxy to other API services like either through API or we just use our own sub)
+    - https://www.sonarsource.com/products/sonarqube/
+    - Snyk
+    - https://semgrep.dev
+- maybe use a service that does UGC to make vertical influencer videos
+    - or just set up my own process for auto making and posting them
+    - TikTok videos targeting vibe coders
 - process
     - clients can submit infiinite requests, but we strictly control the throughput, scope and communication channels
-        - we run sprint cycles (fast tasks, planned milestones) with clear priorities, weekly reporting (Hermes will have to facilitate this), one accountable delivery lead
-        - scope changes are handled by reprioritization / change control
+        - we automate as much of the triage, task management, communication and so on
+        - scope changes are handled by reprioritization / change control (automated as much as possible)
     - we record video walkthroughs using OBS, share with client via Google Drive or CloudFlare or something
     - our Hermes project Kanban is also hooked up to Slack where users can modify (ex. mark something "DONE")
         - actually, managing the Kanban board via Slack may be *the* way clients queue up tasks
@@ -100,8 +71,6 @@
     - cancel at any time
     - Work is done on only one task at a time, even when waiting for client feedback
     - zoom calls can happen but use client alotted time
-- internal
-    - leverage Hermes agent for each client
 
 
 
@@ -362,4 +331,58 @@ Some clients will try to bypass the model. Use these structural policies to hand
     -x deploy to Vercel
         - set up custom domain
     -x favicon
+
+- Dirty Jobs full V1 completion
+    -x finalize copy
+        - Overall reframe around:
+            - security, senior engineer oversight and observability
+            - think we can assume the AI will always be the one to implement
+    -x rethink pricing
+    -x add platform logos to front page (in downloads folder now)
+    -x Add Google Analytics
+    -x Add Calendly link functionality
+        - set up Calendly to use my logo and email
+    -x add OGimage
+    -x set up now
+        - Calendly
+            - free for now, they can schedule a meeting and I'll create a payment link
+    -x make sure Favicon is live on prod
+    -x reviste Privacy policy and TOS based on new content
+    -x fix the before train gif
+    -x schedule some times on calendar to make it look like am unavailable at certain periods
+    -x set up X and LinkedIn profiles
+
+- http://dirtyjobs.studio
+    - do as much upfront work before buying the domain and populating SquareSpace with content, setting up Stripe, and so on
+- I think my innovations here can be 
+    - triage via Hermes
+    - Hermes-facilitated communication
+    - Hermes is the one that manages the board, does scoping and decomposes work into achievable chunks
+- Business: Productized AI Slop cleanup targeting non-technical founders who built applications using AI
+- Internal tools
+    - Calendly
+- Services
+    - refactoring
+    - feature and functionality audits
+    - user data stewardship audits
+    - bug fixes
+        - "My AI is stuck in a loop trying to add a payment gateway; audit this repository file and tell me why it's breaking."
+    - testing (unit, integration, e2e)
+    - CTO oversight, architectural validation
+    - cloud services/infrastructure setup and management (Vercel, Supabase, etc.)
+    - Observability (LangChain, Braintrust, etc.)
+- email
+    - set it up in Maileroo to forward to my GMAIL
+- website
+    - inspired by https://upcode.com/unlimited
+    - use the example of the train going off the tracks meme -- "Is this how your app probably works?" -- "There's a difference between 'it works' and 'It WORKS!!!'"
+    - use Squarespace: For a limited time, take 20% off any new website plan. Use code at checkout: MAY20WF
+    - if traction, can incrementally build my own platform and billing
+    - needs an ironclad TOS and privacy policy to protect us
+    - for hourly, set up Calendly upfront meeting payments: https://calendly.com/payments
+- experiment
+    - do a free trials, ask Adam first if he'd be willing to help out. All I'd be asking him for is to tell me how the free trial goes so I know how to approach it for others. I don't see him as a subscriber unless he actually needs it.
+    - Maybe show to Adam, ask how much he'd be willing to pay and if he's interested
+    - going above and beyond for initial customers will be key
+    - find trusted initial customers who won't abuse the system
 
